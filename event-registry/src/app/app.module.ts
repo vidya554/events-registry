@@ -6,18 +6,25 @@ import { AppComponent } from './app.component';
 import { EventComponent } from './event/event.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
    declarations: [
       AppComponent,
       EventComponent,
-      ParticipantComponent
+      ParticipantComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
-      NoopAnimationsModule
+      NoopAnimationsModule,
+      MatButtonModule, 
+      MatCheckboxModule,
+      ReactiveFormsModule,
    ],
+   exports: [MatButtonModule, MatCheckboxModule],
    providers: [],
    bootstrap: [
       AppComponent
