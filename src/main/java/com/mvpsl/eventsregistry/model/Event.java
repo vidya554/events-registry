@@ -17,4 +17,37 @@ public class Event {
     @OneToMany
     @JoinColumn(name = "event_id")
     private List<Participant> participantList;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getEventdate() {
+        return eventdate;
+    }
+
+    public void setEventdate(LocalDate eventdate) {
+        this.eventdate = eventdate;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 }
