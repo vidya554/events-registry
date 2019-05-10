@@ -3,6 +3,8 @@ package com.mvpsl.eventsregistry.controller;
 import com.mvpsl.eventsregistry.model.Participant;
 import com.mvpsl.eventsregistry.service.ParticipantService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,14 +19,15 @@ public class ParticipantController {
     ParticipantService participantService;
 
     @PostMapping("/addparticipant")
-    public Participant addparticipant(@RequestBody Participant participant){
+    public ResponseEntity<Participant> addparticipant(@RequestBody Participant participant){
         participantService.addParticipant(participant);
-        return participant;
+        return new ResponseEntity<>(participant, HttpStatus.OK);
     }
 
 
     @GetMapping(value = "all")
-    public List<Participant> getParticipants(){
-        return participantService.getPaticipants();
+    public ResponseEntity<List<Participant>> getParticipants(){
+
+        return new ResponseEntity<>(participantService.getPaticipants(), HttpStatus.OK);
     }
 }
