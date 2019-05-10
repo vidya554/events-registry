@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Participant} from '../participant';
+import { PARTICIPANTS } from '../mock-participant';
+
 
 @Component({
   selector: 'app-participant',
@@ -7,10 +9,8 @@ import {Participant} from '../participant';
   styleUrls: ['./participant.component.css']
 })
 export class ParticipantComponent implements OnInit {
-  name: string;
-  email: string;
-  phone: string;
-  participant: Participant;
+  
+  participants =  PARTICIPANTS;
   constructor() { }
 
   ngOnInit() {
