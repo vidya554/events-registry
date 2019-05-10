@@ -10,7 +10,12 @@ export const PARTICIPANTS: Participant[] = [
         name: "sam",
         email: "ysd@ghj.com",
         phone: "4654545",
-        event_id: 100}
+        event_id: 100},
+        {id: 1,
+            name: "vidya",
+            email: "ysv@ghj.com",
+            phone: "46548dcvf5",
+            event_id: 100},
 
 
 ];

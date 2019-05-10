@@ -2,13 +2,16 @@
 <ul> 
  <li *ngFor="let event of events ">
 
-<h1>{{event.eventName}}</h1>
+<h1 class="container">{{event.eventName}}</h1>
+
 <h2>{{event.address}}</h2>
 <h2><span>When: </span> {{event.eventDate}}</h2>
+
 </li>
 </ul>
 
 
 </div>
-<span class="container"><h2>Attendees :</h2></span>
+<div class="attendee"><h2>Attendees</h2>
 <app-participant></app-participant>
+</div>
