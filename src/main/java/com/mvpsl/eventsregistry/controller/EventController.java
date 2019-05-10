@@ -18,8 +18,7 @@ public class EventController {
     }
 
     public Event createEvent(Event event) {
-
-
-        return event;
+       return eventService.createEvent(event);
     }
+
 }
